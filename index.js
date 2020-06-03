@@ -34,9 +34,9 @@ restService.post('/extoModules', function (req, res) {
             'Content-Type': 'application/json',
             'Authorization': token
         },
-    }).then((res: any) => {
-        return res.json();
-    }).catch((err: any) => {
+    }).then(resp => {
+        return resp.json();
+    }).catch(err => {
         console.log(err);
     });
     const extoModules = {
