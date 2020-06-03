@@ -28,7 +28,7 @@ restService.post('/extoModules', function (req, res) {
     }
     console.log(`Token: ${token}`);
     console.log('Connecting to the UAT server');
-    const data = fetch(exto360URL, {
+    let data = fetch(exto360URL, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -39,6 +39,8 @@ restService.post('/extoModules', function (req, res) {
     }).catch(err => {
         console.log(err);
     });
+    data = JSON.stringify(data);
+    console.log(`data: ${data}`);
     const extoModules = {
         google: {
             expectUserResponse: true,
@@ -53,7 +55,7 @@ restService.post('/extoModules', function (req, res) {
             }
         }
     };
-    console.log(`data: ${data}`);
+    
     return res.json({
         payload: extoModules,
         fulfillmentText: data,
