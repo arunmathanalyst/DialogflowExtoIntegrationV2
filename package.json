@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc",
-    "dev": "ts-node-dev --respawn --transpileOnly ./build/app.js",
-    "prod": "tsc && node ./build/app.js"
+     "start": "node index.js"
   },
   "author": "Arun",
   "license": "ISC",
