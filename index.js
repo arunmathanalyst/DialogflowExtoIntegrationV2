@@ -20,7 +20,7 @@ restService.get("/", function(req, res) {
   return res.json({ "success" : "Successfully tested the Dialogflow Exto Integration application" });
 });
 
-restService.post('/extoModules', async function (req, res) {
+restService.post('/extoModules', function (req, res) {
     console.log('extoModules controller is hit.');
     const token = req.headers.authorization;
     if (!token) {
@@ -28,7 +28,7 @@ restService.post('/extoModules', async function (req, res) {
     }
     console.log(`Token: ${token}`);
     console.log('Connecting to the UAT server');
-    const data = await fetch(exto360URL, {
+    const data = fetch(exto360URL, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -62,6 +62,6 @@ restService.post('/extoModules', async function (req, res) {
         source: "webhook-exto-modules"
     });
 });
-restService.listen(process.env.PORT || 8000, function() {
+restService.listen(process.env.PORT || 8001, function() {
   console.log("Server up and listening");
 });
