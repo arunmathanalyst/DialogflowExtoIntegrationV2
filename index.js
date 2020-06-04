@@ -35,12 +35,10 @@ restService.post('/extoModules', async function (req, res) {
             'Authorization': token
         },
     }).then(resp => {
-        //console.log(`Response: ${resp.json()}`)
         return resp.json();
     }).catch(err => {
         console.log(err);
     });
-    //data = JSON.stringify(data);
     console.log(`data: ${data}`);
     const extoModules = {
         google: {
@@ -64,6 +62,6 @@ restService.post('/extoModules', async function (req, res) {
         source: "webhook-exto-modules"
     });
 });
-restService.listen(process.env.PORT || 8001, function() {
+restService.listen(process.env.PORT || 8000, function() {
   console.log("Server up and listening");
 });
