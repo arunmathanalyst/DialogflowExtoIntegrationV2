@@ -35,7 +35,7 @@ restService.post('/extoModules', async function (req, res) {
             'Authorization': token
         },
     }).then(resp => {
-        console.log(`Response: ${resp.json()}`)
+        //console.log(`Response: ${resp.json()}`)
         return resp.json();
     }).catch(err => {
         console.log(err);
