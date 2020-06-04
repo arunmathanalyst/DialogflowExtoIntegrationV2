@@ -58,7 +58,7 @@ restService.post('/extoModules', async function (req, res) {
     };
     return res.json({
         payload: extoModules,
-        fulfillmentText: 'Returning the values from Exto',
+        fulfillmentText: JSON.stringify(data),
         speech: data,
         displayText: data,
         source: "webhook-exto-modules"
