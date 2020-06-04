@@ -60,7 +60,7 @@ restService.post('/extoModules', async function (req, res) {
         payload: extoModules,
         fulfillmentText: data,
         speech: 'Returning the values from Exto',
-        displayText: data,
+        displayText: 'Returning the values from Exto',
         source: "webhook-exto-modules"
     });
 });
