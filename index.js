@@ -53,7 +53,7 @@ restService.post("/exto", async function (req, res) {
     } else if (LOAD_PROJECT === requestType) {
       EXTO_API_URL = `${exto360BaseURL}/node/api/v1/userrole/user/module`;
     } else if (LOAD_CUSTOMER === requestType) {
-      EXTO_API_URL = `${exto360BaseURL}/node/api/v1/userrole/user/module`;
+      EXTO_API_URL = `${exto360BaseURL}/node/api/v1/customers/list`;
     } else {
       returnData = { success: false, message: "Invalid end point" };
     }
