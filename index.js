@@ -5,9 +5,9 @@ const bodyParser = require("body-parser");
 const fetch = require("node-fetch");
 const restService = express();
 
-const LOAD_MODULE = "Load Modules";
-const LOAD_PROJECT = "Load Projects";
-const LOAD_CUSTOMER = "Load Customers";
+const LOAD_MODULE = "Modules";
+const LOAD_PROJECT = "Projects";
+const LOAD_CUSTOMER = "Customers";
 
 restService.use(
   bodyParser.urlencoded({
